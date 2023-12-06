@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+
+     /*primary colors */
+    --primary-color-blue:hsl(237, 18%, 59%);
+    --primary-color-red:hsl(345, 95%, 68%);
+
+      /*neutral colors */
+
+      --natrual-white:hsl(0, 0%, 100%);
+      --natural-db-700:hsl(236, 21%, 26%);
+      --natural-db-800:hsl(235, 16%, 14%);
+      --natural-db-900:hsl(234, 17%, 12%);
+
+      /* Typography */
+      --fs-small:10px;
+      --fs-body:14px;
+      --fs-heading:16px;
+      --fs-time:40px;
+
+      --fw-700:700;
+      
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Red Hat Text', sans-serif;
+    background: var(--natural-db-800);
+    /* background-image: url(./images/bg-stars.svg); */
+}
+
+.stars{
+    position: absolute;
+}
+.hills{
+    position: absolute;
+    bottom: 0;
+}
+
+.container
+{
+    /* margin:100px auto;
+    text-align: center; */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container h2{
+    color: var(--natrual-white);
+    font-size: var(--fs-heading);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: var(--fw-700);
+    margin: 50px auto;
+}
+
+.countdown{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.countdown #day,#hour,#min,#sec{
+    padding: 20px;
+    margin:10px;
+    background-color: var(--natural-db-700);
+    font-size: var(--fs-time);
+    color: var(--primary-color-red);
+    border-radius: 5px;
+}
+
+.text{
+    color: var(--primary-color-blue);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 20px auto;
+}
+
+footer{
+    /* background-image: url(./images/pattern-hills.svg);
+    background-size: cover; */
+    position: absolute;
+    bottom: 30px;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer a{
+    margin: 0 10px;
+}
+footer a:hover{
+    background-color: var(--primary-color-red);
+}
+
+@media (max-width:500px){
+    .container{
+        max-width: auto;
+        padding: 0 20px;
+    }
+}
+@media (min-width:1440px){
+    .stars img,.hills img{
+        width: 1600px;
+    }
+}
+
+@media (min-width:1600px){
+    .stars img,.hills img{
+        width: 1600px;
+    }
+}
